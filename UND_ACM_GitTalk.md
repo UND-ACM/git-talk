@@ -119,6 +119,7 @@ git log
 ```
 
 ```sh
+git log
 git revert HEAD
 
 git log
