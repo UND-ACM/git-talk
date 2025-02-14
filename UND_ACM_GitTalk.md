@@ -273,7 +273,9 @@ git push -u origin --all
 - Git Features
   - `.gitignore`
   - `rebase`, `reflog`, `bisect`
-  - Advanced `git clone`-ing
+  - [git-scm.com/docs](https://git-scm.com/docs)
+
+### Advanced `git clone`-ing
 
 ```sh
 # Renamed repo
