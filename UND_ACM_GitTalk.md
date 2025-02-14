@@ -159,7 +159,7 @@ cd my-project
 # Pull changes from remote
 git fetch --all
 git merge origin
-git pull origin main --all # equiv. to `git fetch --all && git merge origin`
+git pull  # equiv. to `git fetch && git merge`
 
 # Push changes to remote
 echo "Hello" > hello.txt
