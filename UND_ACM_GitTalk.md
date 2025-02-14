@@ -13,21 +13,21 @@
 
 ### What is it?
 
-Git is a version control system (VCS) created by Linus Torvalds in 2005. 
+Git is a version control system (VCS) created by Linus Torvalds in 2005. \
 A VCS is a kind of "meta-save" that allows for storing the history of a software project. They are primarily used for organization and collaboration.
 
-Git is unique from previous VCS as it is decentralized.
+Git is unique from previous VCS as it is decentralized. \
 The server/client dynamic is far less rigid (local/remote).
 
 A software project with its git history and source code is referred to as a repository (repo).
 - `.git` folder - "bare" repo
 - The source code - working repo
 
-GitHub is one example of where git repositories live.
-It was founded in 2008 by Tom Preston-Werner, Chris Wanstrath, P. J. Hyett and Scott Chacon, and was acquired by Microsoft in 2018.
+GitHub is one example of where git repositories live. \
+It was founded in 2008 by Tom Preston-Werner, Chris Wanstrath, P. J. Hyett and Scott Chacon, and was acquired by Microsoft in 2018. \
 It's not the only git forge, but it is the most popular despite being proprietary.
 
-Alternatives include:
+**Alternatives include:**
 - GitLab
 - Gitea
 - Codeberg
@@ -44,14 +44,14 @@ Alternatives include:
 
 ### How do I install it?
 
-Install it via your package management system of choice.
-It **is** in your package management system, whether `apt`, `pacman`, `brew`, `winget`, etc.
+Install it via your package management system of choice. \
+It ***is*** in your package management system, whether `apt`, `pacman`, `brew`, `winget`, etc.
 
 For up-to-date install instructions, refer to [git-scm.com](https://git-scm.com/downloads)
 
 ## Git Usage
 
-First, run `git help`
+First, run `git help` \
 From then on `git status` and `git log` will be your best friends.
 
 ### Pre-config
@@ -100,8 +100,8 @@ git remote -v
 
 ### Pushing to GitHub
 
-Create a new repo on Github: [github.com/new](https://github.com/new)
-Fill out the form and click "Create repository"
+Create a new repo on Github: [github.com/new](https://github.com/new) \
+Fill out the form and click "Create repository" \
 Click the "SSH" button
 
 ```sh
@@ -140,7 +140,7 @@ git push
 
 Git has a feature called branching, which is used to "split the timeline" so to speak.
 
-To see a previous commit temporarily, use `git checkout`.
+To see a previous commit temporarily, use `git checkout`. \
 Git instructs us that we can use this to create a new branch if we want.
 
 ```sh
@@ -327,8 +327,8 @@ clear
 cat "$HOME/.ssh/id_ed25519.pub" # Copy this output
 ```
 
-GitHub > Settings > Access: SSH and GPG keys > New SSH key
-Title: `<Describe the computer>`
+GitHub > Settings > Access: SSH and GPG keys > New SSH key \
+Title: `<Describe the computer>` \
 Key:   `<The contents of the .pub file>`
 
 ```
