@@ -46,7 +46,7 @@ It's not the only git forge, but it is the most popular despite being proprietar
 Install it via your package management system of choice. \
 It ***is*** in your package management system, whether it's `apt`, `pacman`, `brew`, `winget`, etc.
 
-For up-to-date install instructions, refer to [git-scm.com](https://git-scm.com/downloads)
+For up-to-date install instructions, refer to [git-scm.com/downloads](https://git-scm.com/downloads)
 
 ## Git Usage
 
