@@ -231,7 +231,7 @@ Automatic merge failed fix conflicts and then commit the result
 
 ```sh
 grep -rl "======="
-grep -r "=======" -C 5
+grep -r  "=======" -C 5
 cat hello.txt
 # Resolve the merge conflict in your text editor of choice
 ```
