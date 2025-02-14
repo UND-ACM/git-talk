@@ -35,7 +35,7 @@ It's not the only git forge, but it is the most popular despite being proprietar
   - Merging branches
   - Merging with upstream/remote
 - Forking
-  - Fork: Git term for a copy (of the source code).
+  - Fork: Git(Hub) term for a copy (of the source code).
   - As in a "fork in the road"
   - Two main types
     - Soft Fork (pull requests)
