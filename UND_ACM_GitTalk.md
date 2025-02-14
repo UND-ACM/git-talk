@@ -321,8 +321,8 @@ git push
 git merge
 
 git branch
-git switch
 git checkout
+git switch
 ```
 
 ## GitHub Usage
