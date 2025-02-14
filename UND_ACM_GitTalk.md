@@ -1,15 +1,8 @@
 # Git and Github
 
-"I'm an egotistical bastard, and I name all my projects after myself. First Linux, now git." - Linus Torvalds, creator of Linux and git
-
 ## Introduction
 
-### Overview
-
-- Git
-- GitHub
-- SSH keys (time permitting)
-- Markdown (barely)
+"I'm an egotistical bastard, and I name all my projects after myself. First Linux, now git." - Linus Torvalds, creator of Linux and git
 
 ### What is it?
 
