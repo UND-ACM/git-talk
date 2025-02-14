@@ -203,7 +203,7 @@ git branch matt-branch
 git branch
 ```
 
-We'll populate each branch and then merge them.
+We'll populate each branch and then merge them, just as we had done earlier with `main` and `origin/main`.
 
 ```sh
 git switch jeff-branch
