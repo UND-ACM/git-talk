@@ -27,18 +27,24 @@ It's not the only git forge, but it is the most popular despite being proprietar
 - Sourcehut
 - None (wait until the end)
 
-### Why do I care?
+### Why should I care?
 
 - Rollback
+  - Reverting commits
 - Collaboration
+  - Merging branches
+  - Merging with upstream/remote
 - Forking
-  - Soft Fork (pull requests)
-  - Hard Fork
+  - Fork: Git term for a copy (of the source code).
+  - As in a "fork in the road"
+  - Two main types
+    - Soft Fork (pull requests)
+    - Hard Fork
 
 ### How do I install it?
 
 Install it via your package management system of choice. \
-It ***is*** in your package management system, whether `apt`, `pacman`, `brew`, `winget`, etc.
+It ***is*** in your package management system, whether it's `apt`, `pacman`, `brew`, `winget`, etc.
 
 For up-to-date install instructions, refer to [git-scm.com](https://git-scm.com/downloads)
 
