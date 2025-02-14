@@ -164,7 +164,7 @@ git checkout jeff-branch # error: pathspec...
 git branch
 
 git branch jeff-branch
-git checkout jeff-branch
+git checkout jeff-branch # or `git switch jeff-branch`
 git branch
 
 git checkout -b jeff-branch # equiv. to `git branch jeff-branch && git checkout jeff-branch`
