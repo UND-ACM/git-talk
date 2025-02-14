@@ -267,13 +267,13 @@ git push -u origin --all
   - [How to Write a Commit Message - cbeams](https://cbea.ms/git-commit/)
   - [Conventional Commits](https://www.conventionalcommits.org/)
 - Merging and Maintainership
-  - Forking and Pull/Merge Requests (GitHub Flow)
-  - Submitting patches to Mailing Lists
   - [Git email flow vs GitHub flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/)
+    - Forking and Pull/Merge Requests (GitHub Flow)
+    - Submitting patches to Mailing Lists
 - Git Features
   - `.gitignore`
-  - `squash`, `reflog`, `bisect`
-  - Advanced Cloning
+  - `rebase`, `reflog`, `bisect`
+  - Advanced `git clone`-ing
 
 ```sh
 # Renamed repo
