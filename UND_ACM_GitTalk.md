@@ -1,4 +1,4 @@
-# Git and Github
+# Git and GitHub
 
 ## Introduction
 
@@ -124,7 +124,7 @@ git remote -v # outputs nothing
 
 ### Pushing to GitHub
 
-Create a new repo on Github: [github.com/new](https://github.com/new) \
+Create a new repo on GitHub: [github.com/new](https://github.com/new) \
 Fill out the form and click "Create repository" \
 Click the "SSH" button
 
@@ -262,7 +262,7 @@ git push -u origin --all
 - Merging and Maintainership
   - Forking and Pull/Merge Requests (GitHub Flow)
   - Submitting patches to Mailing Lists
-  - [Git email flow vs Github flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/)
+  - [Git email flow vs GitHub flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/)
 - Git Features
   - `.gitignore`
   - `squash`, `reflog`, `bisect`
