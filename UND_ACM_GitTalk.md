@@ -234,7 +234,7 @@ git reset # ?
 
 ### Final Push
 
-```
+```sh
 git push -u origin --all
 ```
 
@@ -277,7 +277,7 @@ git clone ~/src/my-project ./my-project-clone
 - GitHub is a place where git repos live
 - Git can be used independently of GitHub
 
-```
+```sh
 git status
 git log
 
@@ -331,7 +331,7 @@ GitHub > Settings > Access: SSH and GPG keys > New SSH key \
 Title: `<Describe the computer>` \
 Key:   `<The contents of the .pub file>`
 
-```
+```sh
 ssh -T git@github.com
 # Hi $USER! You've successfully authenticated, but GitHub does not provide shell access.
 ```
