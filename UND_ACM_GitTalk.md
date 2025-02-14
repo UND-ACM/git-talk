@@ -79,9 +79,12 @@ git log
 echo "# My Awesome Project" >> README.md
 git status
 git log
+git diff
 
 git add README.md
 git status
+git diff
+
 git rm README.md
 git rm --cached README.md
 git status
@@ -280,6 +283,7 @@ git clone ~/src/my-project ./my-project-clone
 ```sh
 git status
 git log
+git diff
 
 git init
 git clone
