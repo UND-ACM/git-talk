@@ -252,17 +252,6 @@ git switch main
 git merge matt-branch
 ```
 
-### Rollback
-
-```sh
-# If not committed
-git restore hello.txt
-
-# If committed
-git revert HEAD
-git reset # ? 
-```
-
 ### Final Push
 
 ```sh
