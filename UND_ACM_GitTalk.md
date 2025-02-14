@@ -327,6 +327,8 @@ git checkout
 git switch
 ```
 
+Check out [git-scm.com/docs](https://git-scm.com/docs) for more information
+
 ## GitHub Usage
 
 ### Features
