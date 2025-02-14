@@ -310,8 +310,11 @@ git init
 git clone
 
 git add
-git rm
 git commit
+
+git restore
+git revert
+git rm
 
 git pull
 git push
@@ -320,10 +323,6 @@ git merge
 git branch
 git switch
 git checkout
-
-git restore
-git revert
-git reset
 ```
 
 ## GitHub Usage
