@@ -79,27 +79,53 @@ git log
 echo "# My Awesome Project" >> README.md
 git status
 git log
-git diff
 
-git add README.md
+git add README.md # aka "staging" README.md to be committed
 git status
-git diff
-
-git restore --staged README.md
-git rm README.md
-git rm --cached README.md
-git status
-
-git add README.md
-git status
-git log
 
 git commit -m "Initial Commit"
+git log
 git status
+```
+
+```sh
+echo "This is the repo for my super awesome project" >> README.md
+cat README.md
+git status
+git diff # difference between latest commit and unstaged changes
+
+git add README.md
+echo "It supports both foo and bar" >> README.md
+cat README.md
+
+git status
+# git restore --staged README.md # to unstage, will not modify the file
+# git restore README.md          # to discard changes in working directory, modifies the file
+# git add README.md              # to update what will be committed
+
+git restore --staged README.md # unstage
+git status
+git add README.md              # stage
+git status
+git commit -m "Add project description"
+git log
+```
+
+```sh
+git rm README.md
+git status
+git commit -m "Remove README"
+git log
+```
+
+```sh
+git revert HEAD
+
 git log
 git log -p
+git log -p -n 1
 
-git remote -v
+git remote -v # outputs nothing
 ```
 
 ### Pushing to GitHub
