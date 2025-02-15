@@ -123,7 +123,10 @@ git log
 
 ```sh
 git log
-git revert HEAD
+git revert --no-commit HEAD
+git status
+git log
+git revert --continue
 
 git log
 git log -p
