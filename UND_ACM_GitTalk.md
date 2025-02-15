@@ -296,6 +296,7 @@ git fetch origin
 
 # Local Clone
 git clone ./my-project ./my-project-clone
+cd ./my-project-clone
 git remote -v
 ```
 
