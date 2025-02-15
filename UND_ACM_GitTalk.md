@@ -107,6 +107,9 @@ git status
 git add README.md              # stage
 git status
 
+git diff
+git diff --staged
+
 git commit -m "Add project description"
 git log
 ```
