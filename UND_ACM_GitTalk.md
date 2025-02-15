@@ -159,7 +159,7 @@ cd my-project
 # Pull changes from remote
 git fetch --all
 git merge origin
-git pull  # equiv. to `git fetch && git merge`
+# git pull  # equiv. to `git fetch && git merge`
 
 # Push changes to remote
 echo "Hello" > hello.txt
@@ -196,8 +196,8 @@ git branch jeff-branch
 git checkout jeff-branch # or `git switch jeff-branch`
 git branch
 
-git checkout -b jeff-branch # equiv. to `git branch jeff-branch && git checkout jeff-branch`
-git switch -c jeff-branch   # equiv. to `git checkout -b jeff-branch`
+# git checkout -b jeff-branch # equiv. to `git branch jeff-branch && git checkout jeff-branch`
+# git switch -c jeff-branch   # equiv. to `git checkout -b jeff-branch`
 
 git branch matt-branch
 git branch
