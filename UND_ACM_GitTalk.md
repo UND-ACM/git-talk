@@ -288,7 +288,9 @@ git clone --bare https://github.com/torvalds/linux linux.git # Large!
 git clone https://github.com/torvalds/linux --depth 2
 git clone https://github.com/git/git --depth 2
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git --depth 2
-git fetch --unshallow # From https://stackoverflow.com/a/17937889
+
+# Unshallow Shallow Clones (From https://stackoverflow.com/a/17937889)
+git fetch --unshallow
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch origin
 
