@@ -1,39 +1,70 @@
-# Git and GitHub
+---
+title: Git and GitHub
+author: UND Association for Computing Machinery
+institute: https://linktr.ee/UND_ACM
+date: \today
+theme: Warsaw
+colortheme: spruce
+fontsize: 12pt
+aspectratio: 169
 
-## Introduction
+---
+
+# Introduction
 
 "I'm an egotistical bastard, and I name all my projects after myself. First Linux, now git." - Linus Torvalds, creator of Linux and git
 
-### What is it?
+# What is Git?
 
-Git is a version control system (VCS) created by Linus Torvalds in 2005. \
-A VCS is a kind of "meta-save" that allows for storing the history of a software project. They are primarily used for organization and collaboration.
+Git is a version control system (VCS) created by Linus Torvalds in 2005.
+
+A VCS is a kind of "meta-save" that allows for storing the history of a software project.
+
+They are primarily used for organization and collaboration.
+
+# What is Git?
+
+A software project with its git history and source code is referred to as a repository (repo).
+
+- `.git` folder - "bare" repo
+- The source code - working repo
 
 Git is unique from previous VCS as it is decentralized. \
 The server/client dynamic is far less rigid (local/remote).
 
-A software project with its git history and source code is referred to as a repository (repo).
-- `.git` folder - "bare" repo
-- The source code - working repo
+# What is GitHub?
 
-GitHub is one example of where git repositories live. \
-It was founded in 2008 by Tom Preston-Werner, Chris Wanstrath, P. J. Hyett and Scott Chacon, and was acquired by Microsoft in 2018. \
-It's not the only git forge, but it is the most popular despite being proprietary.
+GitHub is one example of where git repositories live.
+
+It was founded in 2008 by Tom Preston-Werner, Chris Wanstrath, P. J. Hyett and Scott Chacon
+
+GitHub was acquired by Microsoft in 2018.
+
+# GitHub Alternatives
+
+GitHub not the only git forge, but it is the most popular despite being proprietary.
 
 **Alternatives include:**
+
 - GitLab
 - Gitea
 - Codeberg
 - Sourcehut
 - None (wait until the end)
 
-### Why should I care?
+# Why should I care?
 
 - Rollback
   - Reverting commits
+
+# Why should I care?
+
 - Collaboration
   - Merging branches
   - Merging with upstream/remote
+
+# Why should I care?
+
 - Forking
   - Fork: Git(Hub) term for a copy (of the source code).
   - As in a "fork in the road"
@@ -41,19 +72,20 @@ It's not the only git forge, but it is the most popular despite being proprietar
     - Soft Fork (pull requests)
     - Hard Fork
 
-### How do I install it?
+# How do I install it?
 
-Install it via your package management system of choice. \
+Install it via your package management system of choice.
+
 It ***is*** in your package management system, whether it's `apt`, `pacman`, `brew`, `winget`, etc.
 
 For up-to-date install instructions, refer to [git-scm.com/downloads](https://git-scm.com/downloads)
 
-## Git Usage
+# Git Usage
 
 First, run `git help` \
 From then on `git status` and `git log` will be your best friends.
 
-### Pre-config
+# Pre-configuration
 
 ```sh
 NAME="Your Name"
@@ -64,7 +96,7 @@ git config --global user.name "$NAME"
 git config --global user.email "$EMAIL"
 ```
 
-### Creating a project
+# Creating a project
 
 ```sh
 git init my-project
@@ -74,12 +106,16 @@ ls -la
 ls -la .git
 git status
 git log
+```
 
+# First Commit
+
+```sh
 echo "# My Awesome Project" >> README.md
 git status
 git log
 
-git add README.md # aka "staging" README.md to be committed
+git add README.md # aka "staging" README.md
 git status
 
 git commit -m "Initial Commit"
@@ -87,20 +123,35 @@ git log
 git status
 ```
 
+# Second Commit
+
 ```sh
-echo "This is the repo for my super awesome project" >> README.md
+echo "Description of my awesome project" >> README.md
 cat README.md
 git status
-git diff # difference between latest commit and unstaged changes
-git add README.md
+git diff
+```
 
+# Second Commit
+
+```sh
+git add README.md
 echo "It supports both foo and bar" >> README.md
 cat README.md
 git status
-# git restore --staged README.md # to unstage, will not modify the file
-# git restore README.md          # to discard changes in working directory, modifies the file
-# git add README.md              # to update what will be committed
+```
 
+# Second Commit
+
+```sh
+# git restore --staged README.md # unstage
+# git restore README.md          # discard
+# git add README.md              # update
+```
+
+# Second Commit
+
+```sh
 git restore --staged README.md # unstage
 git status
 
@@ -114,6 +165,8 @@ git commit -m "Add project description"
 git log
 ```
 
+# Third Commit
+
 ```sh
 git rm README.md
 git status
@@ -121,13 +174,19 @@ git commit -m "Remove README"
 git log
 ```
 
+# Reverting the Third Commit
+
 ```sh
 git log
 git revert --no-commit HEAD
 git status
 git log
 git revert --continue
+```
 
+# Viewing our Commits
+
+```sh
 git log
 git log -p
 git log -p -n 1
@@ -135,10 +194,12 @@ git log -p -n 1
 git remote -v # outputs nothing
 ```
 
-### Pushing to GitHub
+# Pushing to GitHub
 
-Create a new repo on GitHub: [github.com/new](https://github.com/new) \
-Fill out the form and click "Create repository" \
+Create a new repo on GitHub: [github.com/new](https://github.com/new)
+
+Fill out the form and click "Create repository"
+
 Click the "SSH" button
 
 ```sh
@@ -149,7 +210,7 @@ git push -u origin main
 git remote -v
 ```
 
-### A Fresh Start
+# A Fresh Start
 
 ```sh
 cd ..
@@ -159,7 +220,7 @@ git clone "git@github.com:${USERNAME}/my-project.git"
 cd my-project
 ```
 
-### Push and Pull
+# Push and Pull
 
 ```sh
 # Pull changes from remote
@@ -174,12 +235,15 @@ git commit
 git push
 ```
 
-### Checkout and Branching
+# Checkout and Branching
 
 Git has a feature called branching, which is used to "split the timeline" so to speak.
 
-To see a previous commit temporarily, use `git checkout`. \
+To see a previous commit temporarily, use `git checkout`.
+
 Git instructs us that we can use this to create a new branch if we want.
+
+# Checkout and Branching
 
 ```sh
 git checkout "$COMMIT_ID" # detached HEAD state
@@ -192,6 +256,8 @@ git switch main
 git branch -d old-branch # delete old-branch
 ```
 
+# Checkout and Branching
+
 We can also checkout branches
 
 ```sh
@@ -202,12 +268,14 @@ git branch jeff-branch
 git checkout jeff-branch # or `git switch jeff-branch`
 git branch
 
-# git checkout -b jeff-branch # equiv. to `git branch jeff-branch && git checkout jeff-branch`
-# git switch -c jeff-branch   # equiv. to `git checkout -b jeff-branch`
+# git checkout -b jeff-branch 
+# git switch -c jeff-branch
 
 git branch matt-branch
 git branch
 ```
+
+# Checkout and Branching
 
 We'll populate each branch and then merge them, just as we had done earlier with `main` and `origin/main`.
 
@@ -217,7 +285,11 @@ echo "Hello, Jeff!" > hello.txt
 git status
 git add hello.txt
 git commit
+```
 
+# Checkout and Branching
+
+```sh
 git switch matt-branch
 echo "Hello, Matt!" > hello.txt
 git status
@@ -227,13 +299,15 @@ git commit
 git merge jeff-branch
 ```
 
-### Conflict
+# Conflict
 
 ```
 Auto-merging hello.txt
 CONFLICT (content): Merge conflict in hello.txt
 Automatic merge failed fix conflicts and then commit the result
 ```
+
+# Conflict
 
 ```sh
 grep -rl "======="
@@ -250,6 +324,8 @@ Hello, Jeff!
 >>>>>>> jeff-branch
 ```
 
+# Conflict
+
 ```sh
 git status
 git add hello.txt
@@ -259,46 +335,46 @@ git switch main
 git merge matt-branch
 ```
 
-### Final Push
+# Final Push
 
 ```sh
 git push -u origin --all
 ```
 
-### Misc Thoughts
+# Parting Thoughts
 
 - Commit Messages: Imperative Mood
   - "Add" instead of "Adding"
   - "If applied, this commit will $COMMIT_MESSAGE"
   - [How to Write a Commit Message - cbeams](https://cbea.ms/git-commit/)
   - [Conventional Commits](https://www.conventionalcommits.org/)
+
+# Parting Thoughts
+
 - Merging and Maintainership
   - [Git email flow vs GitHub flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/)
     - Forking and Pull/Merge Requests (GitHub Flow)
     - Submitting patches to Mailing Lists
+	
+# Parting Thoughts
+
 - Git Features
   - `.gitignore`
   - `rebase`, `reflog`, `bisect`
   - [git-scm.com/docs](https://git-scm.com/docs)
 
-### Advanced `git clone`-ing
+# Advanced `git clone`-ing
 
 ```sh
 # Renamed repo
-git clone https://github.com/acm-ndsu/GitHub-Workshop GitHub-Workshop-but-cooler
+git clone https://github.com/acm-ndsu/GitHub-Workshop \
+GitHub-Workshop-but-cooler
 
 # Bare repo
-git clone --bare https://github.com/torvalds/linux linux.git # Large!
+git clone --bare https://github.com/torvalds/linux linux.git
 
 # Shallow Clones
-git clone https://github.com/torvalds/linux --depth 2
 git clone https://github.com/git/git --depth 2
-git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git --depth 2
-
-# Unshallow Shallow Clones (From https://stackoverflow.com/a/17937889)
-git fetch --unshallow
-git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-git fetch origin
 
 # Local Clone
 git clone ./my-project ./my-project-clone
@@ -306,11 +382,13 @@ cd ./my-project-clone
 git remote -v
 ```
 
-### Recap
+# Recap
 
 - Git is a version control system
 - GitHub is a place where git repos live
 - Git can be used independently of GitHub
+
+# Recap
 
 ```sh
 git status
@@ -322,7 +400,11 @@ git clone
 
 git add
 git commit
+```
 
+# Recap
+
+```sh
 git restore
 git revert
 git rm
@@ -336,21 +418,18 @@ git checkout
 git switch
 ```
 
-Check out [git-scm.com/docs](https://git-scm.com/docs) for more information
+See [https://git-scm.com/docs](https://git-scm.com/docs) for more information
 
-## GitHub Usage
+# GitHub Usage
 
-### Features
+GitHub Features
 
-GitHub Features:
 - Issues
 - Releases
 - Pull Requests (aka Merge Requests)
 - CI/CD
 
-### SSH keys
-
-[Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+# GitHub SSH Keys
 
 ```sh
 EMAIL="you@example.com" # Should match your GitHub account
@@ -364,11 +443,19 @@ clear
 cat "$HOME/.ssh/id_ed25519.pub" # Copy this output
 ```
 
-GitHub > Settings > Access: SSH and GPG keys > New SSH key \
-Title: `<Describe the computer>` \
+# GitHub SSH Keys
+
+GitHub > Settings > Access: SSH and GPG keys > New SSH key
+
+Title: `<Describe the computer>`
+
 Key:   `<The contents of the .pub file>`
 
 ```sh
 ssh -T git@github.com
-# Hi $USER! You've successfully authenticated, but GitHub does not provide shell access.
+
+# Hi $USER! You've successfully authenticated, but GitHub
+# does not provide shell access.
 ```
+
+See also [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) - Github Documentation
