@@ -462,6 +462,21 @@ git checkout
 git switch
 ```
 
+# Recap - In Context
+
+```sh
+git clone "$URL" # or `git init "$REPO_NAME"`
+cd "$REPO_NAME"
+
+git pull
+git add "$FILE"
+git status
+git commit
+git push
+
+git log
+```
+
 # Recap
 
 For more information:
