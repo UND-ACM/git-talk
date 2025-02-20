@@ -341,6 +341,50 @@ git merge matt-branch
 git push -u origin --all
 ```
 
+# GitHub noreply Emails
+
+GitHub > Settings > Access: Emails
+
+Check "Keep my email address private"
+
+Check "Block command line pushes that expose my email"
+
+```sh
+EMAIL="00000000+username@users.noreply.github.com"
+git config --global user.email "$EMAIL"
+```
+
+# GitHub SSH Keys
+
+```sh
+EMAIL="you@example.com" # Should match your GitHub account
+
+ssh-keygen -t ed25519 -C "$EMAIL"
+eval "$(ssh-agent -s)" # Start the SSH agent
+
+ssh-add "$HOME/.ssh/id_ed25519"
+
+clear
+cat "$HOME/.ssh/id_ed25519.pub" # Copy this output
+```
+
+# GitHub SSH Keys
+
+GitHub > Settings > Access: SSH and GPG keys > New SSH key
+
+Title: `<Describe the computer>`
+
+Key:   `<The contents of the .pub file>`
+
+```sh
+ssh -T git@github.com
+
+# Hi $USER! You've successfully authenticated, but GitHub
+# does not provide shell access.
+```
+
+See also [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) - Github Documentation
+
 # Parting Thoughts
 
 - Commit Messages: Imperative Mood
@@ -418,44 +462,4 @@ git checkout
 git switch
 ```
 
-See [https://git-scm.com/docs](https://git-scm.com/docs) for more information
-
-# GitHub Usage
-
-GitHub Features
-
-- Issues
-- Releases
-- Pull Requests (aka Merge Requests)
-- CI/CD
-
-# GitHub SSH Keys
-
-```sh
-EMAIL="you@example.com" # Should match your GitHub account
-
-ssh-keygen -t ed25519 -C "$EMAIL"
-eval "$(ssh-agent -s)" # Start the SSH agent
-
-ssh-add "$HOME/.ssh/id_ed25519"
-
-clear
-cat "$HOME/.ssh/id_ed25519.pub" # Copy this output
-```
-
-# GitHub SSH Keys
-
-GitHub > Settings > Access: SSH and GPG keys > New SSH key
-
-Title: `<Describe the computer>`
-
-Key:   `<The contents of the .pub file>`
-
-```sh
-ssh -T git@github.com
-
-# Hi $USER! You've successfully authenticated, but GitHub
-# does not provide shell access.
-```
-
-See also [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) - Github Documentation
+See for more information
