@@ -462,4 +462,9 @@ git checkout
 git switch
 ```
 
-See for more information
+# Recap
+
+For more information:
+
+- [Git - Reference (git-scm.com/docs)](https://git-scm.com/docs) 
+- [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
