@@ -1,5 +1,5 @@
 #!/bin/sh
 # requires pandoc and pdflatex
 set -e
-pandoc -f markdown -t beamer UND_ACM_GitTalk.md --highlight-style tango -o UND_ACM_GitTalk.pdf
-pandoc -f markdown -t beamer github-ci.md --highlight-style tango -o github-ci.pdf
+pandoc -f markdown -t beamer 01-git-and-github.md --highlight-style tango -o 01-git-and-github.pdf
+pandoc -f markdown -t beamer 02-github-ci.md --highlight-style tango -o 02-github-ci.pdf
