@@ -26,8 +26,8 @@ They are primarily used for organization and collaboration.
 
 A software project with its git history and source code is referred to as a repository (repo).
 
-- `.git` folder - "bare" repo
-- The source code - working repo
+- `.git` directory  (stores history)
+- working directory (the plaintext source code)
 
 Git is unique from previous VCS as it is decentralized. \
 The server/client dynamic is far less rigid (local/remote).
