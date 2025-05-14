@@ -330,7 +330,7 @@ git commit
 
 ---
 
-## Populating match-branch
+## Populating matt-branch
 
 ```sh
 git switch matt-branch
