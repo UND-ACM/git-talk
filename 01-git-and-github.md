@@ -34,7 +34,7 @@ A software project with its git history and source code is referred to as a repo
 
 ## Decentralization
 
-Git is unique from previous VCS as it is decentralized.
+Git is unique from previous version control systems because it's decentralized.
 
 The server/client dynamic is far less rigid (local/remote).
 
@@ -448,7 +448,7 @@ ssh -T git@github.com
 # does not provide shell access.
 ```
 
-See also [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) - Github Documentation
+See also [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) - GitHub Documentation
 
 \pagebreak
 
