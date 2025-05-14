@@ -13,11 +13,9 @@ header-includes: |
 
 ---
 
-# Introduction
-
-"I'm an egotistical bastard, and I name all my projects after myself. First Linux, now git." - Linus Torvalds, creator of Linux and git
-
 # What is Git?
+
+## Git
 
 Git is a version control system (VCS) created by Linus Torvalds in 2005.
 
@@ -25,29 +23,43 @@ A VCS is a kind of "meta-save" that allows for storing the history of a software
 
 They are primarily used for organization and collaboration.
 
-# What is Git?
+---
+
+## Git Repositories
 
 A software project with its git history and source code is referred to as a repository (repo).
 
 - `.git` directory  (stores history)
 - working directory (the plaintext source code)
 
-Git is unique from previous VCS as it is decentralized. \
+## Decentralization
+
+Git is unique from previous VCS as it is decentralized.
+
 The server/client dynamic is far less rigid (local/remote).
+
+\pagebreak
 
 # What is GitHub?
 
+## GitHub
+
 GitHub is one example of where git repositories live.
 
-It was founded in 2008 by Tom Preston-Werner, Chris Wanstrath, P. J. Hyett and Scott Chacon
+It was founded in 2008 by
+
+- Tom Preston-Werner
+- Chris Wanstrath
+- P. J. Hyett
+- Scott Chacon
 
 GitHub was acquired by Microsoft in 2018.
 
 # GitHub Alternatives
 
-GitHub not the only git forge, but it is the most popular despite being proprietary.
+GitHub is not the only git forge, but it is the most popular despite being proprietary.
 
-**Alternatives include:**
+## Alternatives
 
 - GitLab
 - Gitea
@@ -55,27 +67,33 @@ GitHub not the only git forge, but it is the most popular despite being propriet
 - Sourcehut
 - None (wait until the end)
 
-# Why should I care?
-
-- Rollback
-  - Reverting commits
+\pagebreak
 
 # Why should I care?
 
-- Collaboration
-  - Merging branches
-  - Merging with upstream/remote
+## Rollback
 
-# Why should I care?
+Reverting commits
 
-- Forking
-  - Fork: Git(Hub) term for a copy (of the source code).
-  - As in a "fork in the road"
-  - Two main types
-    - Soft Fork (pull requests)
-    - Hard Fork
+## Collaboration
+
+- Merging branches
+- Merging with upstream/remote
+
+## Forking
+
+Fork: Git(Hub) term for a copy (of the source code).
+
+As in a "fork in the road"
+
+- Soft Fork (pull requests)
+- Hard Fork
+
+\pagebreak
 
 # How do I install it?
+
+## Installation
 
 Install it via your package management system of choice.
 
@@ -84,6 +102,8 @@ It ***is*** in your package management system, whether it's `apt`, `pacman`, `br
 For up-to-date install instructions, refer to [git-scm.com/downloads](https://git-scm.com/downloads)
 
 # Git Usage
+
+## Basic Usage
 
 First, run `git help` \
 From then on `git status` and `git log` will be your best friends.
@@ -135,7 +155,7 @@ git status
 git diff
 ```
 
-# Second Commit
+---
 
 ```sh
 git add README.md
@@ -144,7 +164,7 @@ cat README.md
 git status
 ```
 
-# Second Commit
+---
 
 ```sh
 # git restore --staged README.md # unstage
@@ -152,7 +172,7 @@ git status
 # git add README.md              # update
 ```
 
-# Second Commit
+---
 
 ```sh
 git restore --staged README.md # unstage
@@ -187,6 +207,8 @@ git log
 git revert --continue
 ```
 
+\pagebreak
+
 # Viewing our Commits
 
 ```sh
@@ -213,6 +235,8 @@ git push -u origin main
 git remote -v
 ```
 
+\pagebreak
+
 # A Fresh Start
 
 ```sh
@@ -238,15 +262,25 @@ git commit
 git push
 ```
 
-# Checkout and Branching
-
-Git has a feature called branching, which is used to "split the timeline" so to speak.
-
-To see a previous commit temporarily, use `git checkout`.
-
-Git instructs us that we can use this to create a new branch if we want.
+\pagebreak
 
 # Checkout and Branching
+
+## Checkout
+
+Git allows users to temporarily view a previous commit by using `git checkout` and the commit id.
+
+## Branching
+
+Git also has a feature called branching, which is used to "split the timeline" so to speak.
+
+---
+
+## Checkout Commits
+
+Notice that after checking out a commit, Git informs us we can create a new branch at this commit.
+
+We may wish to do this to build new features on a known-working previous commit, rather than on main.
 
 ```sh
 git checkout "$COMMIT_ID" # detached HEAD state
@@ -259,9 +293,9 @@ git switch main
 git branch -d old-branch # delete old-branch
 ```
 
-# Checkout and Branching
+---
 
-We can also checkout branches
+## Checkout Branches
 
 ```sh
 git checkout jeff-branch # error: pathspec...
@@ -278,7 +312,11 @@ git branch matt-branch
 git branch
 ```
 
-# Checkout and Branching
+---
+
+\pagebreak
+
+## Populating jeff-branch
 
 We'll populate each branch and then merge them, just as we had done earlier with `main` and `origin/main`.
 
@@ -290,7 +328,9 @@ git add hello.txt
 git commit
 ```
 
-# Checkout and Branching
+---
+
+## Populating match-branch
 
 ```sh
 git switch matt-branch
@@ -302,7 +342,11 @@ git commit
 git merge jeff-branch
 ```
 
-# Conflict
+\pagebreak
+
+# Conflict!
+
+## Merge Conflict
 
 ```
 Auto-merging hello.txt
@@ -310,7 +354,9 @@ CONFLICT (content): Merge conflict in hello.txt
 Automatic merge failed fix conflicts and then commit the result
 ```
 
-# Conflict
+---
+
+## Finding the Conflict
 
 ```sh
 grep -rl "======="
@@ -318,6 +364,8 @@ grep -r  "=======" -C 5
 cat hello.txt
 # Resolve the merge conflict in your text editor of choice
 ```
+
+## hello.txt
 
 ```
 <<<<<<< HEAD
@@ -327,7 +375,9 @@ Hello, Jeff!
 >>>>>>> jeff-branch
 ```
 
-# Conflict
+---
+
+## Post-Conflict
 
 ```sh
 git status
@@ -340,11 +390,17 @@ git merge matt-branch
 
 # Final Push
 
+## Push all branches to origin (i.e. GitHub)
+
 ```sh
 git push -u origin --all
 ```
 
-# GitHub noreply Emails
+\pagebreak
+
+# Private Email
+
+## GitHub Configuration (noreply emails)
 
 GitHub > Settings > Access: Emails
 
@@ -352,12 +408,16 @@ Check "Keep my email address private"
 
 Check "Block command line pushes that expose my email"
 
+## Git Configuration (noreply emails)
+
 ```sh
 EMAIL="00000000+username@users.noreply.github.com"
 git config --global user.email "$EMAIL"
 ```
 
 # GitHub SSH Keys
+
+## Creating an SSH key
 
 ```sh
 EMAIL="you@example.com" # Should match your GitHub account
@@ -371,7 +431,9 @@ clear
 cat "$HOME/.ssh/id_ed25519.pub" # Copy this output
 ```
 
-# GitHub SSH Keys
+---
+
+## GitHub configuration (SSH keys)
 
 GitHub > Settings > Access: SSH and GPG keys > New SSH key
 
@@ -388,7 +450,11 @@ ssh -T git@github.com
 
 See also [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) - Github Documentation
 
+\pagebreak
+
 # Parting Thoughts
+
+## Commit Messages
 
 - Commit Messages: Imperative Mood
   - "Add" instead of "Adding"
@@ -396,19 +462,21 @@ See also [Connecting to GitHub with SSH](https://docs.github.com/en/authenticati
   - [How to Write a Commit Message - cbeams](https://cbea.ms/git-commit/)
   - [Conventional Commits](https://www.conventionalcommits.org/)
 
-# Parting Thoughts
+## Merging and Maintainership
 
-- Merging and Maintainership
-  - [Git email flow vs GitHub flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/)
-    - Forking and Pull/Merge Requests (GitHub Flow)
-    - Submitting patches to Mailing Lists
-	
-# Parting Thoughts
+- [Git email flow vs GitHub flow](https://blog.brixit.nl/git-email-flow-versus-github-flow/)
+  - Forking and Pull/Merge Requests (GitHub Flow)
+  - Submitting patches to Mailing Lists
 
-- Git Features
-  - `.gitignore`
-  - `rebase`, `reflog`, `bisect`
-  - [git-scm.com/docs](https://git-scm.com/docs)
+---
+
+## Git Features
+
+- `.gitignore`
+- `rebase`, `reflog`, `bisect`
+- [git-scm.com/docs](https://git-scm.com/docs)
+
+\pagebreak
 
 # Advanced `git clone`-ing
 
@@ -429,13 +497,19 @@ cd ./my-project-clone
 git remote -v
 ```
 
+\pagebreak
+
 # Recap
+
+## What is Git and GitHub?
 
 - Git is a version control system
 - GitHub is a place where git repos live
 - Git can be used independently of GitHub
 
-# Recap
+---
+
+## Git Commands - Part 1
 
 ```sh
 git status
@@ -449,7 +523,9 @@ git add
 git commit
 ```
 
-# Recap
+---
+
+## Git Commands - Part 2
 
 ```sh
 git restore
@@ -465,7 +541,9 @@ git checkout
 git switch
 ```
 
-# Recap - In Context
+---
+
+## Git Commands with Context
 
 ```sh
 git clone "$URL" # or `git init "$REPO_NAME"`
@@ -480,9 +558,11 @@ git push
 git log
 ```
 
-# Recap
+\pagebreak
 
-For more information:
+# Questions?
+
+## Additional Resources
 
 - [Git - Reference (git-scm.com/docs)](https://git-scm.com/docs) 
 - [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
