@@ -7,6 +7,9 @@ theme: Warsaw
 colortheme: spruce
 fontsize: 12pt
 aspectratio: 169
+header-includes: |
+    \usepackage{hyperref}
+    \hypersetup{colorlinks=true,urlcolor=blue}
 
 ---
 
