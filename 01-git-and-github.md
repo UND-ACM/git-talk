@@ -338,7 +338,12 @@ echo "Hello, Matt!" > hello.txt
 git status
 git add hello.txt
 git commit
+```
 
+## Merging matt-branch and jeff-branch
+
+```sh
+# git switch matt-branch # currently on matt-branch
 git merge jeff-branch
 ```
 
