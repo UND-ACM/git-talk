@@ -543,7 +543,7 @@ git switch
 
 ---
 
-## Git Commands with Context
+## Git Commands In Context
 
 ```sh
 git clone "$URL" # or `git init "$REPO_NAME"`
