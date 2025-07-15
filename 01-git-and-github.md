@@ -407,7 +407,7 @@ git push -u origin --all
 
 ## GitHub Configuration (noreply emails)
 
-GitHub > Settings > Access: Emails
+[GitHub > Settings > Emails](https://github.com/settings/emails)
 
 Check "Keep my email address private"
 
@@ -440,7 +440,7 @@ cat "$HOME/.ssh/id_ed25519.pub" # Copy this output
 
 ## GitHub configuration (SSH keys)
 
-GitHub > Settings > Access: SSH and GPG keys > New SSH key
+[GitHub > Settings > SSH and GPG keys](https://github.com/settings/keys) > New SSH key
 
 Title: `<Describe the computer>`
 
