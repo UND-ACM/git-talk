@@ -403,23 +403,6 @@ git push -u origin --all
 
 \pagebreak
 
-# Private Email
-
-## GitHub Configuration (noreply emails)
-
-[GitHub > Settings > Emails](https://github.com/settings/emails)
-
-Check "Keep my email address private"
-
-Check "Block command line pushes that expose my email"
-
-## Git Configuration (noreply emails)
-
-```sh
-EMAIL="00000000+username@users.noreply.github.com"
-git config --global user.email "$EMAIL"
-```
-
 # GitHub SSH Keys
 
 ## Creating an SSH key
@@ -456,6 +439,23 @@ ssh -T git@github.com
 See also [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) - GitHub Documentation
 
 \pagebreak
+
+# Private Email
+
+## GitHub Configuration (noreply emails)
+
+[GitHub > Settings > Emails](https://github.com/settings/emails)
+
+Check "Keep my email address private"
+
+Check "Block command line pushes that expose my email"
+
+## Git Configuration (noreply emails)
+
+```sh
+EMAIL="00000000+username@users.noreply.github.com"
+git config --global user.email "$EMAIL"
+```
 
 # Parting Thoughts
 
